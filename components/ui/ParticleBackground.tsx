@@ -47,7 +47,7 @@ export default function ParticleBackground() {
             straight: false,
           },
           number: {
-            density: { enable: true, area: 900 },
+            density: { enable: true, width: 900, height: 900 },
             value: 80,
           },
           opacity: { value: 0.5 },
