@@ -35,7 +35,8 @@ export const skills = [
   {
     category: "Tools and Platforms",
     icon: "wrench",
-    items: ["GitHub", "Supabase", "Vercel", "Render", "Command Prompt"],
+    items: ["Python", "JavaScript", "HTML", "CSS", "React Native"],
+
   },
   {
     category: "AI Prompt Engineering",
