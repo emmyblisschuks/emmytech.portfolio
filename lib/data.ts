@@ -14,11 +14,12 @@ export const siteConfig = {
 };
 
 export const roles = [
-  "AI Agent Builder",
-  "Workflow Automation Developer",
-  "Business RAG Chatbot Builder",
-  "AI Automation Analyst",
+  "an AI Agent Builder",
+  "a Workflow Automation Developer",
+  "a Business RAG Chatbot Builder",
+  "an AI Automation Analyst",
 ];
+
 
 export const skills = [
   {
