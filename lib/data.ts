@@ -6,7 +6,7 @@ export const siteConfig = {
   email: "emmy41096@gmail.com",
   cvPath: "/ChukwuChideraEmmanuel_Resume.pdf",
   status: "Available for opportunities",
-  bio: "A self-taught AI and Automation specialist building intelligent workflows, AI agents, and RAG systems that solve real business problems. Currently serving as COO at PromptIQ, enrolled at TSAcademy, and studying Computer Science at NOUN.",
+  bio: "A self-taught AI and Automation specialist building intelligent workflows, AI agents, and RAG systems that solve real business problems. Currently enrolled at TSAcademy and studying Computer Science at NOUN.",
   socials: {
     github: "https://github.com/emmyblisschuks",
     linkedin: "https://linkedin.com/in/chukwuchideraemmanuel",
@@ -24,7 +24,7 @@ export const skills = [
   {
     category: "AI and Automation",
     icon: "bot",
-    items: ["n8n", "Zapier", "Make.com", "RAG", "AI Agents", "Agentic AI", "API Integrations", "Workflow Automation"],
+    items: ["n8n", "Zapier", "RAG", "AI Agents", "Workflow Automation", "API Integrations"],
   },
   {
     category: "Programming and Web",
@@ -94,7 +94,7 @@ export const projects = [
     title: "Reputation Feedback Engine",
     category: "AI Automation",
     description:
-      "A smart customer review collection system that routes positive and negative feedback separately, triggers instant manager alerts on repeat negative reviews, and uses a Gemini LLM to draft intelligent response suggestions directly to a management dashboard.",
+      "A smart customer review collection system that routes positive and negative feedback separately, triggers instant manager alerts on repeat negative reviews, and uses Gemini LLM to draft intelligent response suggestions to a management dashboard.",
     features: [
       "Positive and negative review routing",
       "Repeat negative review manager alerts",
@@ -106,21 +106,6 @@ export const projects = [
   },
   {
     id: "05",
-    title: "Daily Research Digest",
-    category: "AI Development",
-    description:
-      "An automated research chatbot that independently searches a chosen topic each day, compiles a structured summary, and delivers it on a recurring schedule. No manual input needed once set up.",
-    features: [
-      "Daily scheduled autonomous research",
-      "Topic-based intelligent summarisation",
-      "Zero manual intervention after setup",
-    ],
-    stack: ["n8n", "AI Agent", "Webhook", "Gemini LLM"],
-    github: "https://github.com/emmyblisschuks",
-    live: null,
-  },
-  {
-    id: "06",
     title: "Noteify",
     category: "Web Development",
     description:
@@ -134,53 +119,38 @@ export const projects = [
     github: "https://github.com/emmyblisschuks",
     live: "https://noteify-eta.vercel.app/app",
   },
-  {
-    id: "07",
-    title: "Job Applicant Screening Automation",
-    category: "Workflow Automation",
-    description:
-      "Built to stop qualified candidates from slipping through manual HR processes. Automatically receives applications, checks experience criteria, dispatches interview invitations or rejection emails, and keeps HR informed at every step.",
-    features: [
-      "Automated experience-based screening",
-      "Interview invite and rejection email dispatch",
-      "HR stage notifications with zero manual follow-up",
-    ],
-    stack: ["n8n", "Webhook", "Gmail", "Google Sheets"],
-    github: "https://github.com/emmyblisschuks",
-    live: null,
-  },
 ];
 
 export const journey = [
   {
     year: "2023",
     title: "Started University",
-    description: "Enrolled in a BSc Computer Science programme at the National Open University of Nigeria (NOUN), beginning the academic foundation of my tech journey.",
+    description:
+      "Enrolled in a BSc Computer Science programme at the National Open University of Nigeria (NOUN), beginning the academic foundation of my tech journey.",
   },
   {
     year: "2023",
     title: "Store Manager and Engineer",
-    description: "Joined Mobileplace.NG as Store Manager and Device Engineer, handling operations, device repair, customer service, and inventory for an iPhone and gadgets retail outlet.",
+    description:
+      "Joined Mobileplace.NG as Store Manager and Device Engineer, handling operations, device repair, customer service, and inventory for an iPhone and gadgets retail outlet.",
   },
   {
     year: "2025",
     title: "Self-Taught AI Skills",
-    description: "Began independently learning AI and automation, diving into n8n, AI agents, and workflow systems, building real projects while learning.",
+    description:
+      "Began independently learning AI and automation, diving into n8n, AI agents, and workflow systems, building real projects while learning.",
   },
   {
     year: "2026",
     title: "TSAcademy Scholarship",
-    description: "Enrolled in a competitive scholarship at TSAcademy to formally study AI and Automation, accelerating expertise in intelligent workflow engineering.",
-  },
-  {
-    year: "2026",
-    title: "COO at PromptIQ",
-    description: "Appointed Chief Operating Officer at PromptIQ, an AI organisation in Lagos, supporting operations, teaching at the academy, and driving product growth alongside the founder.",
+    description:
+      "Enrolled in a competitive scholarship at TSAcademy to formally study AI and Automation, accelerating expertise in intelligent workflow engineering.",
   },
   {
     year: "2026",
     title: "Growth Marketer at TavCorp",
-    description: "Working remotely as a Growth Marketer and Automation Analyst at TavCorp, designing automation workflows and running marketing campaigns.",
+    description:
+      "Working remotely as a Growth Marketer and Automation Analyst at TavCorp, designing automation workflows and running marketing campaigns.",
   },
 ];
 
@@ -189,7 +159,7 @@ export const services = [
     icon: "bot",
     title: "AI Agent Development",
     description:
-      "Building autonomous AI agents that reason, plan, and act on your behalf. These agents handle complex multi-step tasks that used to require constant human attention, working reliably in the background so you do not have to.",
+      "Building autonomous AI agents that reason, plan, and act on your behalf. These agents handle complex multi-step tasks that used to require constant human attention, working reliably in the background.",
   },
   {
     icon: "workflow",
@@ -201,24 +171,18 @@ export const services = [
     icon: "plug",
     title: "API Integration",
     description:
-      "Connecting your apps, platforms, and data sources through clean API integrations so every tool in your stack talks to every other, in real time, without data silos or manual transfers.",
+      "Connecting your apps, platforms, and data sources through clean API integrations so every tool in your stack communicates in real time, without data silos or manual transfers.",
   },
   {
     icon: "message-square",
     title: "RAG Chatbot Development",
     description:
-      "Building retrieval-augmented AI chatbots trained on your own documents and data. Your customers and teams get accurate, instant answers pulled directly from your knowledge base, not guesses.",
+      "Building retrieval-augmented AI chatbots trained on your own documents and data. Your customers and teams get accurate, instant answers pulled directly from your knowledge base.",
   },
   {
     icon: "bar-chart",
     title: "AI Automation Consulting",
     description:
       "Analysing your business operations to identify where intelligent automation delivers the most impact. You get a clear, practical roadmap for saving time, cutting costs, and reducing errors.",
-  },
-  {
-    icon: "video",
-    title: "AI Video Ads Production",
-    description:
-      "Creating AI-generated promotional video content tailored to your brand voice and audience. Fast, cost-effective creative that is built to grab attention and drive real results.",
   },
 ];
