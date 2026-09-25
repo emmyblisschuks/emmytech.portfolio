@@ -4,6 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { siteConfig } from "@/lib/data";
+import { MapPin, Mail, GraduationCap, Briefcase } from "lucide-react";
+
 
 const stats = [
   { label: "Projects Built", value: "7+" },
