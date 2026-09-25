@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Menu } from "lucide-react";
+import { X, Menu, Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { siteConfig } from "@/lib/data";
 
@@ -84,22 +84,29 @@ const toggleTheme = () => {
             ))}
           </div>
 
-          {/* Desktop right actions */}
-          <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={() => handleNav("#contact", "Contact")}
-              className="text-sm text-slate-300 hover:text-white transition-colors px-4 py-2"
-            >
-              Get in Touch
-            </button>
-            <a
-              href={siteConfig.cvPath}
-              download
-              className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-[#060d1a] font-semibold text-sm px-4 py-2 rounded-full transition-all duration-200"
-            >
-              CV
-            </a>
-          </div>
+       {/* Desktop right actions */}
+<div className="hidden md:flex items-center gap-3">
+  <button
+    onClick={toggleTheme}
+    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all"
+  >
+    {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
+  </button>
+  <button
+    onClick={() => handleNav("#contact", "Contact")}
+    className="text-sm text-slate-300 hover:text-white transition-colors px-4 py-2"
+  >
+    Get in Touch
+  </button>
+  <a
+    href={siteConfig.cvPath}
+    download
+    className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-[#060d1a] font-semibold text-sm px-4 py-2 rounded-full transition-all duration-200"
+  >
+    CV
+  </a>
+</div>
+
 
           {/* Mobile hamburger */}
           <button
