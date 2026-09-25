@@ -168,20 +168,28 @@ const toggleTheme = () => {
               </div>
 
               <div className="flex flex-col gap-3 pt-6 border-t border-white/10">
-                <button
-                  onClick={() => handleNav("#contact", "Contact")}
-                  className="w-full py-3 rounded-xl border border-white/20 text-slate-300 text-sm font-medium hover:text-white transition-colors"
-                >
-                  Let&apos;s Talk
-                </button>
-                <a
-                  href={siteConfig.cvPath}
-                  download
-                  className="w-full py-3 rounded-xl bg-cyan-500 text-[#060d1a] font-semibold text-sm text-center transition-all hover:bg-cyan-400"
-                >
-                  Download CV
-                </a>
-              </div>
+  <button
+    onClick={toggleTheme}
+    className="w-full py-3 rounded-xl border border-white/20 text-slate-300 text-sm font-medium hover:text-cyan-400 transition-colors flex items-center justify-center gap-2"
+  >
+    {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
+    {theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+  </button>
+  <button
+    onClick={() => handleNav("#contact", "Contact")}
+    className="w-full py-3 rounded-xl border border-white/20 text-slate-300 text-sm font-medium hover:text-white transition-colors"
+  >
+    Let&apos;s Talk
+  </button>
+  <a
+    href={siteConfig.cvPath}
+    download
+    className="w-full py-3 rounded-xl bg-cyan-500 text-[#060d1a] font-semibold text-sm text-center transition-all hover:bg-cyan-400"
+  >
+    Download CV
+  </a>
+</div>
+
             </motion.div>
           </motion.div>
         )}
