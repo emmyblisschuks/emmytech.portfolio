@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { MapPin, Mail, GraduationCap, Briefcase } from "lucide-react";
 import { siteConfig } from "@/lib/data";
 
 const stats = [
@@ -58,21 +57,21 @@ export default function About() {
           {/* Text side */}
           <ScrollReveal direction="right">
             <div className="space-y-6">
-              <p className="text-slate-300 text-base leading-relaxed">
-                I am a self-taught AI and Automation specialist based in Lagos, Nigeria. My work sits at the
-                intersection of intelligent systems and practical business operations. I build things that actually work
-                in the real world, not just demos.
-              </p>
-              <p className="text-slate-400 text-base leading-relaxed">
-                Currently serving as Chief Operating Officer at PromptIQ, an AI organisation in Lagos, I teach at their
-                academy and drive product growth alongside the founder. I also work remotely as a Growth Marketer and
-                Automation Analyst at TavCorp, where I design workflows that power marketing and business operations.
-              </p>
-              <p className="text-slate-400 text-base leading-relaxed">
-                I am enrolled at TSAcademy on an AI and Automation scholarship, and studying Computer Science at the
-                National Open University of Nigeria. Everything I build comes from a genuine obsession with making
-                systems smarter and processes leaner.
-              </p>
+        <p className="text-slate-300 text-base leading-relaxed">
+  I am a self-taught AI and Automation specialist based in Lagos, Nigeria. My work sits at the
+  intersection of intelligent systems and practical business operations. I build things that actually
+  work in the real world, not just demos.
+</p>
+<p className="text-slate-400 text-base leading-relaxed">
+  I work remotely as a Growth Marketer and Automation Analyst at TavCorp, designing workflows that
+  power marketing and business operations.
+</p>
+<p className="text-slate-400 text-base leading-relaxed">
+  I am enrolled at TSAcademy on an AI and Automation scholarship, and studying Computer Science at the
+  National Open University of Nigeria. Everything I build comes from a genuine obsession with making
+  systems smarter and processes leaner.
+</p>
+
 
               {/* Info cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
@@ -85,13 +84,14 @@ export default function About() {
                   <span className="text-slate-300 text-sm">{siteConfig.email}</span>
                 </div>
                 <div className="flex items-center gap-3 glass-card px-4 py-3">
-                  <GraduationCap size={16} className="text-cyan-400 shrink-0" />
-                  <span className="text-slate-300 text-sm">BSc Computer Science, NOUN</span>
-                </div>
-                <div className="flex items-center gap-3 glass-card px-4 py-3">
-                  <Briefcase size={16} className="text-cyan-400 shrink-0" />
-                  <span className="text-slate-300 text-sm">COO, PromptIQ</span>
-                </div>
+  <GraduationCap size={16} className="text-cyan-400 shrink-0" />
+  <span className="text-slate-300 text-sm">BSc Computer Science, NOUN</span>
+</div>
+<div className="flex items-center gap-3 glass-card px-4 py-3">
+  <Briefcase size={16} className="text-cyan-400 shrink-0" />
+  <span className="text-slate-300 text-sm">Growth Marketer, TavCorp</span>
+</div>
+
               </div>
             </div>
           </ScrollReveal>
