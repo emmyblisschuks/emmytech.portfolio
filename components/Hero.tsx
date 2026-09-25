@@ -66,12 +66,12 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-xl md:text-2xl font-medium mb-6 h-10"
             >
-              <span className="text-slate-300">And I&apos;m an </span>
+           <span className="text-slate-300">And I&apos;m </span>
+<TypeWriter
+  words={roles}
+  className="text-cyan-400 font-semibold"
+/>
 
-              <TypeWriter
-                words={roles}
-                className="text-cyan-400 font-semibold"
-              />
             </motion.div>
 
             {/* Bio */}
