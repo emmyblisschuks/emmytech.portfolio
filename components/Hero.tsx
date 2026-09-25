@@ -52,7 +52,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-6xl font-black text-white leading-tight mb-4 tracking-tight"
+              className="text-3xl md:text-6xl font-black text-white leading-tight mb-4 tracking-tight break-words"
+
             >
               Chukwu Chidera
               <br />
@@ -64,7 +65,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-xl md:text-2xl font-medium mb-6 h-10"
+              className="text-lg md:text-2xl font-medium mb-6 min-h-[2.5rem]"
+
             >
            <span className="text-slate-300">And I&apos;m </span>
 <TypeWriter
