@@ -16,10 +16,17 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [active, setActive] = useState("Home");
+export default function Navbar() {const [scrolled, setScrolled] = useState(false);
+const [menuOpen, setMenuOpen] = useState(false);
+const [active, setActive] = useState("Home");
+const [theme, setTheme] = useState("dark");
+
+const toggleTheme = () => {
+  const next = theme === "dark" ? "light" : "dark";
+  setTheme(next);
+  document.documentElement.setAttribute("data-theme", next);
+};
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
