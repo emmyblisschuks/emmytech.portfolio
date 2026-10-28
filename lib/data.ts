@@ -121,6 +121,21 @@ export const projects = [
     github: "https://github.com/emmyblisschuks",
     live: "https://noteify-eta.vercel.app/app",
   },
+  {
+    id: "06",
+    title: "Scry",
+    category: "AI Development",
+    description:
+      "A study assistant that answers exam-style questions using only the student's own notes. Upload a PDF or DOCX, add questions as screenshots or pasted text, and get answers with a confidence rating and the exact source passage. Built on a RAG pipeline with a vector database and Gemini.",
+    features: [
+      "OCR for question screenshots, plus pasted text questions",
+      "Answers grounded in your notes with confidence levels and source snippets",
+      "Remembers indexed material, so repeat uploads cost no extra processing",
+    ],
+    stack: ["Next.js", "Supabase", "pgvector", "Edge Functions", "Gemini API", "Tesseract.js"],
+    github: "https://github.com/emmyblisschuks/scry-app",
+    live: "https://scry-app.vercel.app",
+  },
 ];
 
 export const journey = [
