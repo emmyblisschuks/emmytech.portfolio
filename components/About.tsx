@@ -69,7 +69,7 @@ export default function About() {
   power marketing and business operations.
 </p>
 <p className="text-slate-400 text-base leading-relaxed">
-  I am enrolled at TSAcademy on an AI and Automation scholarship, and studying Computer Science at the
+  I graduated from TSAcademy's AI and Automation programme on a scholarship, and I am studying Computer Science at the
   National Open University of Nigeria. Everything I build comes from a genuine obsession with making
   systems smarter and processes leaner.
 </p>

@@ -6,7 +6,7 @@ export const siteConfig = {
   email: "emmy41096@gmail.com",
   cvPath: "/ChukwuChideraEmmanuel_Resume.pdf",
   status: "Available for opportunities",
-  bio: "A self-taught AI and Automation specialist building intelligent workflows, AI agents, and RAG systems that solve real business problems. Currently enrolled at TSAcademy and studying Computer Science at NOUN.",
+  bio: "A self-taught AI and Automation specialist building intelligent workflows, AI agents, and RAG systems that solve real business problems. Certified in AI and Automation by TSAcademy and studying Computer Science at NOUN.",
   socials: {
     github: "https://github.com/emmyblisschuks",
     linkedin: "https://linkedin.com/in/chukwuchideraemmanuel",
@@ -138,6 +138,20 @@ export const projects = [
   },
 ];
 
+export const certificate = {
+  title: "AI & Automation",
+  issuer: "TS Academy",
+  duration: "3 months",
+  date: "October 30, 2026",
+  credentialId: "TSQ98AFEG9AWUF",
+  image: "/ts-academy-ai-automation-certificate.jpg",
+  alt: "TS Academy certificate of completion in AI & Automation awarded to Chukwu Chidera Emmanuel",
+  caption:
+    "Three months of intensive, hands-on training turning AI from a buzzword into systems that run real businesses.",
+  description:
+    "I completed TS Academy's 3-month AI & Automation programme, meeting every programme requirement. It sharpened how I design AI agents, n8n workflows, and RAG chatbots, and I put it to work on the projects above.",
+};
+
 export const journey = [
   {
     year: "2023",
@@ -168,6 +182,12 @@ export const journey = [
     title: "Growth Marketer at TavCorp",
     description:
       "Working remotely as a Growth Marketer and Automation Analyst at TavCorp, designing automation workflows and running marketing campaigns.",
+  },
+  {
+    year: "Oct 2026",
+    title: "Graduated from TSAcademy",
+    description:
+      "Completed the 3-month AI and Automation programme and earned my certification, ready to build intelligent systems for real businesses.",
   },
 ];
 

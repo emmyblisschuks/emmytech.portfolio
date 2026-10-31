@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Menu, Sun, Moon } from "lucide-react";
+import { X, Menu } from "lucide-react";
 import Image from "next/image";
 import { siteConfig } from "@/lib/data";
 
@@ -11,6 +11,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Certificate", href: "#certificate" },
   { label: "Journey", href: "#journey" },
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
@@ -19,14 +20,26 @@ const navLinks = [
 export default function Navbar() {const [scrolled, setScrolled] = useState(false);
 const [menuOpen, setMenuOpen] = useState(false);
 const [active, setActive] = useState("Home");
-const [theme, setTheme] = useState("dark");
 
-const toggleTheme = () => {
-  const next = theme === "dark" ? "light" : "dark";
-  setTheme(next);
-  document.documentElement.setAttribute("data-theme", next);
-};
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const link = navLinks.find((l) => l.href === `#${entry.target.id}`);
+            if (link) setActive(link.label);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+    navLinks.forEach((l) => {
+      const el = document.querySelector(l.href);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -68,7 +81,7 @@ const toggleTheme = () => {
           </button>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <button
                 key={link.label}
@@ -85,13 +98,7 @@ const toggleTheme = () => {
           </div>
 
        {/* Desktop right actions */}
-<div className="hidden md:flex items-center gap-3">
-  <button
-    onClick={toggleTheme}
-    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/30 transition-all"
-  >
-    {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
-  </button>
+<div className="hidden lg:flex items-center gap-3">
   <button
     onClick={() => handleNav("#contact", "Contact")}
     className="text-sm text-slate-300 hover:text-white transition-colors px-4 py-2"
@@ -109,12 +116,22 @@ const toggleTheme = () => {
 
 
           {/* Mobile hamburger */}
+          <div className="flex lg:hidden items-center gap-3">
+            <a
+              href={siteConfig.cvPath}
+              download
+              className="hidden sm:inline-flex bg-cyan-500 hover:bg-cyan-400 text-[#060d1a] font-semibold text-sm px-4 py-2 rounded-full transition-all duration-200"
+            >
+              CV
+            </a>
           <button
             onClick={() => setMenuOpen(true)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white"
+            aria-label="Open menu"
+            className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white"
           >
             <Menu size={18} />
           </button>
+          </div>
         </div>
       </motion.nav>
 
@@ -125,7 +142,7 @@ const toggleTheme = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 md:hidden"
+            className="fixed inset-0 z-50 lg:hidden"
           >
             <div className="absolute inset-0 bg-[#060d1a]/95 backdrop-blur-xl" />
             <motion.div
@@ -168,19 +185,6 @@ const toggleTheme = () => {
               </div>
 
               <div className="flex flex-col gap-3 pt-6 border-t border-white/10">
-  <button
-    onClick={toggleTheme}
-    className="w-full py-3 rounded-xl border border-white/20 text-slate-300 text-sm font-medium hover:text-cyan-400 transition-colors flex items-center justify-center gap-2"
-  >
-    {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
-    {theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
-  </button>
-  <button
-    onClick={() => handleNav("#contact", "Contact")}
-    className="w-full py-3 rounded-xl border border-white/20 text-slate-300 text-sm font-medium hover:text-white transition-colors"
-  >
-    Let&apos;s Talk
-  </button>
   <a
     href={siteConfig.cvPath}
     download
